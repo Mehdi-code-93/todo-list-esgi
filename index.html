@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Todo List App</h1>
+        <div id="auth-container">
+            <!-- inscription -->
+            <form id="register-form">
+                <h2>Inscription</h2>
+                <input type="text" id="register-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="register-password" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+            <!-- connexion -->
+            <form id="login-form">
+                <h2>Connexion</h2>
+                <input type="text" id="login-username" placeholder="Nom d'utilisateur" required>
+                <input type="password" id="login-password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+        <div id="todo-container" style="display: none;">
+            <h2>Mes tâches</h2>
+            <!-- ajout de tâche  -->
+            <form id="add-task-form">
+                <input type="text" id="task-title" placeholder="Titre de la tâche" required>
+                <textarea id="task-description" placeholder="Description de la tâche" required></textarea>
+                <input type="date" id="task-deadline" required>
+                <button type="submit">Ajouter une tâche</button>
+            </form>
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher une tâche">
+            </div>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+    <script src="storage.js"></script>
+    <script src="auth.js"></script>
+    <script src="tasks.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
